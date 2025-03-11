@@ -27,9 +27,9 @@ source selenium_env/bin/activate
 
 ### Instalar Selenium y WebDriver Manager
 
-````bash
+```bash
 pip install selenium webdriver-manager
-``
+```
 
 ### Ejemplo básico
 
@@ -56,7 +56,7 @@ driver = webdriver.Edge(service=service)
 driver.get("https://www.google.com")
 print(driver.title)
 driver.quit()
-````
+```
 
 ## Conceptos básicos
 
@@ -122,6 +122,20 @@ finally:
 ```
 
 ### Maneja las excepciones
+
+Para código simple e introductorio, puedes usar un manejo general de excepciones:
+
+```python
+try:
+    # Tu código de Selenium aquí
+    driver.find_element(By.ID, "elemento")
+except Exception as e:
+    print(f"Error: {e}")  # Muestra el tipo específico de error
+finally:
+    driver.quit()
+```
+
+Para código más avanzado, puedes capturar excepciones específicas:
 
 ```python
 from selenium.common.exceptions import NoSuchElementException

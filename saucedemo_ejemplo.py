@@ -1,9 +1,9 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium import webdriver      # Módulo principal de Selenium para controlar navegadores
+from selenium.webdriver.common.by import By     # Define métodos para localizar elementos (ID, CLASS_NAME, XPATH, etc.)
+from webdriver_manager.chrome import ChromeDriverManager    # Gestiona la descarga automática del ChromeDriver compatible
+from selenium.webdriver.chrome.service import Service       # Configura el servicio que maneja el ChromeDriver
+from selenium.webdriver.support.ui import WebDriverWait     # Permite la espera de elementos en la página
+from selenium.webdriver.support import expected_conditions as EC   # Condiciones predefinidas para usar con WebDriverWait
 import time
 
 # Configurar el driver
